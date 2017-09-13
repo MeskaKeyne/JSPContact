@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>#pays</title>
 </head>
 <body>
 <c:set var="liste_pays" value= "${requestScope['LISTE_PAYS']}"/>
@@ -27,10 +27,12 @@
 		<br>
 		#pays
 		<input type= "text" name="ADD_PAYS"/>
-		<br>
+		&nbsp;
 		#abr
 		<input type= "text" name="ADD_ABR"/>
-		<input type="submit" value="envoyer"/>
+		&nbsp;
+		<input type="submit" value="!"/>
+		<br>
 <a href="${pageContext.request.contextPath}/contacts.do">cd ..</a>
 </form>
 </body>

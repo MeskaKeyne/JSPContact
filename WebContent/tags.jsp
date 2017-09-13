@@ -25,7 +25,14 @@
 		<br>
 		#tag
 		<input type= "text" name="ADD_TAG"/>
-		<input type="submit" value="envoyer"/>
+		<input type="submit" value="!"/>
+</form>
+<form action="${pageContext.request.contextPath}/tag.do" method="post">
+		./delete_tag.sh : &nbsp;
+		<br>
+		#rm -rf &nbsp;
+		<input type= "text" name="DEL_TAG"/>
+		<input type="submit" value="!"/>
 </form>
 <a href="${pageContext.request.contextPath}/contacts.do">cd ..</a>
 </body>

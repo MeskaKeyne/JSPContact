@@ -40,6 +40,15 @@ public class ManagerTag extends HttpServlet {
 		
 		/*analyse de la validation de la requete */
 		String addTag = req.getParameter("ADD_TAG");
+		String delTag = req.getParameter("DEL_TAG");
+		int del = -1;
+		
+		try{
+			del = Integer.parseInt(delTag);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		this._manager.removeTag(del);
 		this._manager.createAndSaveTag(addTag);
 		req.setAttribute("ADD_TAG", addTag);
 		req.getRequestDispatcher("/addtag.jsp").forward(req, resp);

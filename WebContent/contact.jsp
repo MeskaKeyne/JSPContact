@@ -14,6 +14,17 @@
 	
 	<c:forEach var="contact" items="${liste_contacts}">
 		#<c:out value="${contact.id} ${contact.firstname} ${contact.name} ${contact.email} "/>
+		<a href="${pageContext.request.contextPath}/contacts.do?ID=${contact.id}">...</a>
+		<br>
+
+	</c:forEach>
+	
+	<c:set var="liste_tag" value= "${requestScope['LISTE_TAG']}"/>
+
+	<p>./liste_tag.sh&nbsp; ${requestScope['ID']}</p>
+	
+	<c:forEach var="tag" items="${liste_tag}">
+		#<c:out value="${tag.id} ${tag.value} "/>
 		<br>
 
 	</c:forEach>
