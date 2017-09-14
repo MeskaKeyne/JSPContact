@@ -43,11 +43,9 @@ public class ManagerTag extends HttpServlet {
 		String delTag = req.getParameter("DEL_TAG");
 		int del = -1;
 		
-		try{
-			del = Integer.parseInt(delTag);
-		}catch(Exception e){
-			e.printStackTrace();
-		}
+		
+			if(delTag !=null) del = Integer.parseInt(delTag);
+
 		this._manager.removeTag(del);
 		this._manager.createAndSaveTag(addTag);
 		req.setAttribute("ADD_TAG", addTag);
